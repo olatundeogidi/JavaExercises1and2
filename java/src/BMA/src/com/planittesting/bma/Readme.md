@@ -1,5 +1,26 @@
 # Java extended exercises
 
+## To test the below exercises
+
+The code to test your solution actually works is stored in this repository.  You need to run the class  BMA.src.com.planittesting.gui.GUIBenchManager
+
+To fully test your solution
+
+- Click add button to add a new consultant
+- Click Remove and remove a consultant
+- Click get BM Salary ensure you get the correct value
+- Click Assign enter the consultant name
+  - Click the Assign check box
+  - Click the Assign button
+  - Make sure the consultant you entered has the Assigned value of true
+- Click Add time  
+  - Enter a consultant name
+  - Enter hours
+  - Click on the Add button
+  - Find the consultant in the list and click on it
+  - Ensure that the Hours field is correct
+- Click on the Total Salary button and make sure the value is correct
+
 ## Task 1
 
 - Create an Employee Class that
