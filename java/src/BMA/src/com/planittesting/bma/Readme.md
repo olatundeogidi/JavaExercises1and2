@@ -6,13 +6,26 @@ The code to test your solution actually works is stored in this repository.  You
 
 To fully test your solution
 
+### Add consultant
+
 - Click add button to add a new consultant
 - Click Remove and remove a consultant
+
+### Assign Consultant
 
 - Click Assign enter the consultant name
   - Click the Assign check box
   - Click the Assign button
   - Make sure the consultant you entered has the Assigned value of true
+
+### Unassign Consultant
+
+- Click Assign enter the consultant name
+  - Click the Assign button
+  - Make sure the consultant you entered has the Assigned value of false
+
+### Add hours
+
 - Click Add time  
   - Enter a consultant name
   - Enter hours
