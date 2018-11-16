@@ -8,7 +8,7 @@ To fully test your solution
 
 - Click add button to add a new consultant
 - Click Remove and remove a consultant
-- Click get BM Salary ensure you get the correct value
+
 - Click Assign enter the consultant name
   - Click the Assign check box
   - Click the Assign button
@@ -19,7 +19,6 @@ To fully test your solution
   - Click on the Add button
   - Find the consultant in the list and click on it
   - Ensure that the Hours field is correct
-- Click on the Total Salary button and make sure the value is correct
 
 ## Task 1
 
