@@ -1,5 +1,6 @@
-package com.planittesting.bma;
+package BMA.src.com.planittesting.gui;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public interface iBenchManagerApplication {
@@ -13,12 +14,12 @@ public interface iBenchManagerApplication {
      */
     Employee getEmployee(String fullName);
 
-    /**
+    /*****
      * The getHoursAverage method return the calculation of the avergage of hours per consultant for the 4 consultants
      * that the BMA have available.
      *
      * @return A double value with the Average
-     */
+     *****/
     double getHoursAverage();
 
 
@@ -85,7 +86,7 @@ public interface iBenchManagerApplication {
      * @param joinDate The join date to the company of the employee
      * @return Boolean meaning if teh new enrollment was successful
      */
-    boolean addEmployee(String fullName, String joinDate);
+    boolean addEmployee(String fullName,String joinDate);
 
     /**
      * Returns the employee collection of the Bench Manager Application

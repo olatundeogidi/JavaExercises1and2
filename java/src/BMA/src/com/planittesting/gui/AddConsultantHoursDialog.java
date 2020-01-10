@@ -1,4 +1,6 @@
-package com.planittesting.gui;
+package BMA.src.com.planittesting.gui;
+
+import BMA.src.com.planittesting.GUIBenchManager.GUIBenchManager;
 
 import javax.swing.*;
 import java.awt.*;

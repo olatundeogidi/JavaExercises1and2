@@ -1,4 +1,6 @@
-package com.planittesting.gui;
+package BMA.src.com.planittesting.gui;
+
+import BMA.src.com.planittesting.GUIBenchManager.GUIBenchManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,8 +12,8 @@ public class AddConsultantDialog extends JDialog implements ActionListener {
     // Constants
     // -----------------------------------------------------------------
 
-    public final static String DIALOG_TITLE = "Add new Consultant";
-    public final static String LBL_CONSULTANT_NAME = "Name: ";
+    public final static String DIALOG_TITLE = "(Add new Consultant)";
+    public final static String LBL_CONSULTANT_NAME = "Full Name: ";
     public final static String ADD = "Assign";
     public final static String CANCEL = "Cancel";
     public final static String Date = "Join Date";

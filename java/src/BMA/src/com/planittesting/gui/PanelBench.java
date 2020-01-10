@@ -1,7 +1,7 @@
-package com.planittesting.gui;
+package BMA.src.com.planittesting.gui;
 
-import com.planittesting.bma.Employee;
-import com.planittesting.bma.Skill;
+import BMA.src.com.planittesting.GUIBenchManager.GUIBenchManager;
+//import BMA.src.com.planittesting.gui.Skill;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -176,10 +176,10 @@ public class PanelBench extends JPanel implements ActionListener, ListSelectionL
     public void refresh_consultants(ArrayList<Employee> employees, int consultantsAvailable) {
         this.consultants.setListData(employees.toArray());
         this.lblUnassignedConsultants.setText(Available + consultantsAvailable);
-        refresh_SkillSet(new ArrayList<>());
+       //refresh_SkillSet(new ArrayList());
     }
 
-    public void refresh_SkillSet(ArrayList<Skill> skills) {
+    public <Skill> void refresh_SkillSet(ArrayList<Skill> skills) {
         this.consultantSkills.setListData(skills.toArray());
     }
 
@@ -192,7 +192,7 @@ public class PanelBench extends JPanel implements ActionListener, ListSelectionL
             Employee employee = (Employee) consultants.getSelectedValue();
             txtConsultantName.setText(employee.getFullName());
             txtConsultantHours.setText(employee.getHours() + "");
-            refresh_SkillSet(employee.getSkillArrayList());
+        //  refresh_SkillSet(employee.getSkillArrayList());
 
         } else {
             txtConsultantName.setText("");

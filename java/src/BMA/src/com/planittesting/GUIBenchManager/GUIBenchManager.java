@@ -1,11 +1,10 @@
-package com.planittesting.gui;
+package BMA.src.com.planittesting.GUIBenchManager;
 
-import com.planittesting.bma.BenchManagerApplication;
-import com.planittesting.bma.Employee;
-import com.planittesting.bma.iBenchManagerApplication;
+import BMA.src.com.planittesting.gui.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
@@ -36,7 +35,7 @@ public class GUIBenchManager extends JFrame {
     // -----------------------------------------------------------------
 
     public GUIBenchManager() {
-        benchManager = new BenchManagerApplication();
+        benchManager =new BenchManagerApplication();
 
         setTitle(MAIN_TITLE);
         setSize(470, 480);
@@ -62,17 +61,17 @@ public class GUIBenchManager extends JFrame {
     // -----------------------------------------------------------------
 
     public void addConsultantHoursDialog() {
-        AddConsultantHoursDialog dialog = new AddConsultantHoursDialog(this);
+        BMA.src.com.planittesting.gui.AddConsultantHoursDialog dialog = new BMA.src.com.planittesting.gui.AddConsultantHoursDialog(this);
         dialog.setVisible(true);
     }
 
     public void addConsultantAssignDialog() {
-        AssignConsultantDialog dialog = new AssignConsultantDialog(this);
-        dialog.setVisible(true);
+AssignConsultantDialog dialog = new AssignConsultantDialog(this);
+dialog.setVisible(true);
     }
 
     public void addConsultantDialog() {
-        AddConsultantDialog dialog = new AddConsultantDialog(this);
+      AddConsultantDialog dialog = new AddConsultantDialog(this);
         dialog.setVisible(true);
     }
 
@@ -107,7 +106,7 @@ public class GUIBenchManager extends JFrame {
 
         try {
             if (!benchManager.addEmployee(fullName, joinDate)) {
-                JOptionPane.showMessageDialog(this, ERROR_ADD, "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this,ERROR_ADD, "Error: "+fullName+" Information not added", JOptionPane.ERROR_MESSAGE);
                 updateInformation();
             } else {
                 updateInformation();
@@ -121,15 +120,18 @@ public class GUIBenchManager extends JFrame {
 
 
     public void updateInformation() {
+try {
+    ArrayList<Employee> employees = benchManager.getEmployees();
+    panelBench.refresh_consultants(employees, benchManager.getNumberOfEmployeeAvailable());
+  /*  if (!employees.isEmpty()) {
+        panelBench.changeConsultantSelected(employees.get(0));
+    }*/
+}catch (Exception e)
+{
+    JOptionPane.showMessageDialog(this, ". "+e.getMessage(), "Error: "+e.getMessage(), JOptionPane.ERROR_MESSAGE);
+    e.printStackTrace();
 
-        ArrayList<Employee> employees = benchManager.getEmployees();
-
-
-        panelBench.refresh_consultants(employees, benchManager.getNumberOfEmployeeAvailable());
-        if (!employees.isEmpty()) {
-            panelBench.changeConsultantSelected(employees.get(0));
-        }
-
+}
     }
 
     public void addConsultantHours(String name, String hours) {

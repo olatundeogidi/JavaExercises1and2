@@ -1,4 +1,4 @@
-package com.planittesting.gui;
+package BMA.src.com.planittesting.gui;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
