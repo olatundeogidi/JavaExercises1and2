@@ -4,7 +4,6 @@ import BMA.src.com.planittesting.gui.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
@@ -62,12 +61,12 @@ public class GUIBenchManager extends JFrame {
 
     public void addConsultantHoursDialog() {
         BMA.src.com.planittesting.gui.AddConsultantHoursDialog dialog = new BMA.src.com.planittesting.gui.AddConsultantHoursDialog(this);
-        dialog.setVisible(true);
+            dialog.setVisible(true);
     }
 
     public void addConsultantAssignDialog() {
-AssignConsultantDialog dialog = new AssignConsultantDialog(this);
-dialog.setVisible(true);
+        AssignConsultantDialog dialog = new AssignConsultantDialog(this);
+            dialog.setVisible(true);
     }
 
     public void addConsultantDialog() {
@@ -118,20 +117,19 @@ dialog.setVisible(true);
         }
     }
 
-
     public void updateInformation() {
-try {
-    ArrayList<Employee> employees = benchManager.getEmployees();
-    panelBench.refresh_consultants(employees, benchManager.getNumberOfEmployeeAvailable());
-  /*  if (!employees.isEmpty()) {
-        panelBench.changeConsultantSelected(employees.get(0));
-    }*/
-}catch (Exception e)
-{
-    JOptionPane.showMessageDialog(this, ". "+e.getMessage(), "Error: "+e.getMessage(), JOptionPane.ERROR_MESSAGE);
-    e.printStackTrace();
-
-}
+        try {
+        ArrayList<Employee> employees = benchManager.getEmployees();
+        panelBench.refresh_consultants(employees, benchManager.getNumberOfEmployeeAvailable());
+            if (!employees.isEmpty()) {
+            panelBench.changeConsultantSelected(employees.get(0));
+        }
+    }
+        catch (Exception e)
+    {
+        JOptionPane.showMessageDialog(this, ". "+e.getMessage(), "Error: "+e.getMessage(), JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+    }
     }
 
     public void addConsultantHours(String name, String hours) {

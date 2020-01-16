@@ -30,7 +30,17 @@ public class BenchManagerApplication implements iBenchManagerApplication {
     @Override
     public int getNumberOfEmployeeAvailable() {
         // TODO Auto-generated method stub
-        return 0;
+        boolean assign;
+        int a = 0;
+        for(Employee aConsultant : empArray) {
+            Consultant newConsultant = (Consultant) aConsultant;
+            assign = newConsultant.isAssign();
+            if(!assign)
+            {
+                a++;
+            }
+        }
+        return a;
     }
 
     @Override
